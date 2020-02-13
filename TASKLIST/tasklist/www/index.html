@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src &apos;self&apos; data: gap: https://ssl.gstatic.com &apos;unsafe-eval&apos;; style-src &apos;self&apos; &apos;unsafe-inline&apos;; media-src *; img-src &apos;self&apos; data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="js/jquery-1.5.0.mobile.min.css">
+		<style>
+		/* For avoiding title truncation in wp8 */
+		.ui-header .ui-title {
+				overflow: visible !important;
+		}
+		/* For fixing the absolute position issue for the default cordova gen page*/
+		#cjp-accordion1 .app {
+				left: 5px !important;
+				margin: 5px !important;
+				position: relative !important;
+		}
+		</style>
+		<title>Hello World</title>
+    </head>
+    <body>		<!-- page 1 -->
+		<div data-role="page" id="homePage">
+			<div data-role="header">
+				<h1>Home</h1>
+			</div>
+			<ul id="menu" data-role="listview">
+				<button type="button" onclick="afegirTasca()">Afegir</button>
+				<li><a href="#page1">Page1</a></li>
+				<li><a href="#page2">Page2</a></li>
+				<li><a href="#page3">Page3</a></li>
+			</ul>
+			
+			<div data-role="footer" data-position="fixed">
+				<h1>Home</h1>
+			</div><!-- /footer -->
+		</div> <!-- home page -->
+
+		<!-- page 1 -->
+		<div data-role="page" id="page1">
+			<div data-role="header">
+				<a href="#" data-icon="back" data-rel="back" title="Go back">Back</a>
+				<h1>Page1</h1>
+			</div>
+
+					<div class="ui-content">
+		<div class="app">
+            <h1>Apache Cordova</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+        </div>			</div><!-- end page 1 content -->
+			
+			<div data-role="footer" data-position="fixed">
+				<h1>Page1</h1>
+			</div><!-- /footer -->
+		</div><!-- /page1 -->
+
+		<!-- page 2 -->
+		<div data-role="page" id="page2">
+			<div data-role="header">
+				 <a href="#" data-icon="back" data-rel="back" title="Go back">Back</a>
+				<h1>Page2</h1>
+			</div>
+
+			<div class="ui-content">
+				<p>This is page 2</p>
+			</div><!-- end page 2 content -->
+
+			<div data-role="footer" data-position="fixed">
+				<h1>Page2</h1>
+			</div><!-- /footer -->
+		</div><!-- /page2 -->
+
+		<!-- page 3 -->
+		<div data-role="page" id="page3">
+			<div data-role="header">
+			<a href="#" data-icon="back" data-rel="back" title="Go back">Back</a>
+				<h1>Page3</h1>
+			</div>
+
+			<div class="ui-content">
+				<p>This is page 3</p>
+			</div><!-- end page 3 content -->
+
+			<div data-role="footer" data-position="fixed">
+				<h1>Page3</h1>
+			</div><!-- /footer -->
+		</div><!-- /page3 -->
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js" id="cordova-jquery"></script>
+<script type="text/javascript" id="jqm-trans-disable"></script>
+<script type="text/javascript" src="../www/app.js"></script>
+		/* For having a faster transition */
+		$(document).on("mobileinit", function() {
+				$.mobile.defaultPageTransition = "none";
+				$.mobile.defaultDialogTransition = "none";
+		});
+		</script><script type="text/javascript" src="js/jquery-1.5.0.mobile.min.js"></script><script type="text/javascript" src="js/index.js"></script></body>
+</html>
