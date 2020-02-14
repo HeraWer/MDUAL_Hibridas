@@ -16,6 +16,24 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+function afegirTasca() {
+
+
+    var text = prompt("Nova tasca:");
+
+     var li = document.createElement("li");
+     var a = document.createElement("a");
+     a.href = "#" + text;
+     if(text != null){
+     a.appendChild(document.createTextNode(text));
+     li.appendChild(a);
+     a.className = "ui-btn ui-btn-icon-right ui-icon-carat-r";
+     document.getElementById("llista").appendChild(li);    
+     } 
+
+ }
+
 var app = {
     // Application Constructor
     initialize: function() {
