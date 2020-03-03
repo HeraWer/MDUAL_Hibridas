@@ -16,6 +16,11 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+$(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+
 var app = {
     // Application Constructor
     initialize: function() {
