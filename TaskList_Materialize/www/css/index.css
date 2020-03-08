@@ -1,0 +1,107 @@
+body {
+    display: flex !important;
+    min-height: 100vh !important;
+    flex-direction: column !important;
+}
+
+main {
+    flex: 1 0 auto !important;
+}
+
+@media only screen and (min-width: 993px) {
+    nav a.sidenav-trigger {
+        display: block
+    }
+}
+
+nav .brand-logo {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.textArtist {
+    width: 80% !important;
+    margin: 10px !important;
+}
+
+.container-listaArtistas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.tabs.tabs-transparent .indicator {
+    background-color: #fff;
+    right: 0 !important;
+}
+
+.collapsible-header {
+    place-content: center;
+    font-size: x-large;
+}
+
+.collapsible-body {
+    overflow-y: scroll;
+    max-height: 60vh;
+}
+
+@media (max-height: 870px) {
+    .collapsible-body {
+        overflow-y: scroll;
+        max-height: 50vh;
+    }
+}
+
+@media (max-height: 690px) {
+    .collapsible-body {
+        overflow-y: scroll;
+        max-height: 40vh;
+    }
+}
+
+.collapsible-header i {
+    align-self: center;
+}
+
+.page-footer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+}
+
+.white-text {
+    text-align: center;
+}
+
+@media only screen and (min-width: 993px) {
+    .row .col.offset-l2 {
+        margin-left: 0 !important;
+    }
+}
+
+.text-bolder {
+    font-weight: bold;
+}
+
+.sombra-bordes {
+    text-shadow: 0 0 5px black;
+}
+
+.sidenav .user-view .circle {
+    width: 80px !important;
+    height: 70px !important;
+}
+
+.fontSize {
+    font-size: 2rem !important;
+}
+
+.fontSize:hover {
+    font-weight: bold;
+}
+
+.sidenav .divider {
+    margin: 0 0 0 0 !important;
+}

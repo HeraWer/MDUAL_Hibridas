@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Task List</title>
+
+    <script src="js/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    <!--Import Google Icon Font-->
+    <link href="css/icon.css" rel="stylesheet" />
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="css/materialize.min.css" />
+
+    <link rel="stylesheet" href="css/index.css" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <nav class="nav-extended">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo"><img style="margin-top: 7px; margin-left: 20px;" height="60"
+                    src="img/logo.png" alt="logo" /></a>
+
+            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#home" class="fontSize">Home</a></li>
+                <li><a href="#login" class="fontSize">Login</a></li>
+                <li><a href="#about" class="fontSize">About</a></li>
+            </ul>
+        </div>
+        <div class="nav-content">
+            <ul class="tabs tabs-transparent">
+                <li class="tab">
+                    <a href="#test1">Shopping List</a>
+                </li>
+                <li class="tab">
+                    <a class="active" href="#test2">Songs List</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <ul id="slide-out" class="sidenav">
+        <li>
+            <div class="user-view center" style="text-align: -webkit-center; margin-bottom: 8%;">
+                <img class="circle" src="img/logo.png">
+            </div>
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a href="#home">Home</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a href="#login">Login</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a href="#about">About</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a href="#about">
+            Download music groups</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+    </ul>
+
+    <div id="test2" class="col s12">
+        <div class="container-findAllArtist">
+            <input class="textArtist" id="last_name" type="text">
+            <button style="margin: auto;" id="getArtist" class="btn waves-effect waves-light">Search</button>
+            <ul style="width: 100%;height: 62vh;overflow-y: auto;" id="findAllArtist" class="collection with-header">
+            </ul>
+        </div>
+    </div>
+    <ul id="test1" class="collapsible">
+        <li class="active">
+            <div class="collapsible-header">
+                <i class="material-icons">add_shopping_cart</i>List
+            </div>
+            <div class="collapsible-body">
+                <div class="row" style="text-align: center;">
+                    <div class="col s6">
+                        <button class="btn waves-effect waves-light addItem">Add</button>
+                    </div>
+                    <div class="col s6">
+                        <button class="btn waves-effect waves-light removeItem">Remove</button>
+                    </div>
+                </div>
+                <ul id="shoppingList">
+                    <li>
+                        <h5>1. Onion</h5>
+                    </li>
+                    <li>
+                        <h5>2. Milk</h5>
+                    </li>
+                    <li>
+                        <h5>3. Tomato</h5>
+                    </li>
+                    <li>
+                        <h5>4. Ice Cream</h5>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l12 offset-l2 s12">
+                    <h5 class="white-text text-bolder sombra-bordes">Links</h5>
+                    <div class="col s3"></div>
+                    <div class="col s2 center">
+                        <a class="grey-text text-lighten-3 sombra-bordes" href="#home">Home</a>
+                    </div>
+                    <div class="col s2 center">
+                        <a class="grey-text text-lighten-3 sombra-bordes" href="#login">Login</a>
+                    </div>
+                    <div class="col s2 center">
+                        <a class="grey-text text-lighten-3 sombra-bordes" href="#about">About</a>
+                    </div>
+                    <div class="col s3"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/index.js"></script>
+    <!--JavaScript at end of body for optimized loading-->
+    <script src="js/materialize.min.js"></script>
+</body>
+
+</html>
